@@ -1,4 +1,4 @@
-const totalSpent = 2000;
+let totalSpent = 2000;
 let payment = 500;
 let discount = 0;
 
@@ -14,6 +14,12 @@ if (totalSpent >= 100 && totalSpent < 1000) {
   console.log('No partner, discount 0%');
 }
 
+payment -= payment * discount;
+
 console.log(
   `We place an order for ${payment} credits with a ${discount * 100}% discount`
 );
+
+totalSpent += payment;
+
+console.log(`The total amount spent in the store ${totalSpent}`);
